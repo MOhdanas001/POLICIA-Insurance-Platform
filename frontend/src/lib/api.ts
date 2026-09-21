@@ -1,6 +1,4 @@
-import process from "process";
-
-export const API_BASE = '/api/v1';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api/v1';
 
 export async function apiRequest<T = any>(
   endpoint: string,
@@ -22,7 +20,11 @@ export async function apiRequest<T = any>(
   }
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, {
+    const baseUrl = API_BASE.endsWith('/') ? API_BASE.slice(0, -1) : API_BASE;
+    const cleanEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+    const url = endpoint.startsWith('http') ? endpoint : `${baseUrl}${cleanEndpoint}`;
+
+    const res = await fetch(url, {
       ...options,
       headers,
     });

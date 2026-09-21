@@ -68,7 +68,7 @@ export default function AdminPoliciesPage() {
         <TopHeader user={user} title="Policy Management" subtitle="Create, version, and administer insurance products." />
 
         <main className="p-4 sm:p-6 md:p-8 max-w-7xl mx-auto w-full flex flex-col gap-6">
-          
+
           {/* Header Controls */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white rounded-3xl p-5 border border-warm-border shadow-soft-sm">
             <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
@@ -76,11 +76,10 @@ export default function AdminPoliciesPage() {
                 <button
                   key={t}
                   onClick={() => setTypeFilter(t)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
-                    typeFilter === t
+                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${typeFilter === t
                       ? 'bg-brand-orange text-white shadow-soft-sm'
                       : 'bg-cream-50 text-charcoal-muted hover:bg-brand-peach/50'
-                  }`}
+                    }`}
                 >
                   {t}
                 </button>
@@ -143,7 +142,7 @@ export default function AdminPoliciesPage() {
       {isModalOpen && (
         <div className="fixed inset-0 bg-charcoal/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-4xl border border-warm-border shadow-soft-lg w-full max-w-2xl overflow-hidden animate-in fade-in zoom-in-95">
-            
+
             <div className="flex items-center justify-between p-6 border-b border-warm-border bg-cream-50/50">
               <div>
                 <h3 className="text-lg font-extrabold text-charcoal">Create Insurance Policy</h3>

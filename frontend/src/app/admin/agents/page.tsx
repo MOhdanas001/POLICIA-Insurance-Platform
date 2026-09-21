@@ -57,7 +57,7 @@ export default function AdminAgentsPage() {
         <TopHeader user={user} title="Agent Roster" subtitle="Manage insurance agents and customer assignments." />
 
         <main className="p-4 sm:p-6 md:p-8 max-w-7xl mx-auto w-full flex flex-col gap-6">
-          
+
           <div className="flex items-center justify-between bg-white rounded-3xl p-5 border border-warm-border shadow-soft-sm">
             <div>
               <h3 className="text-lg font-extrabold text-charcoal">Active Insurance Agents</h3>
