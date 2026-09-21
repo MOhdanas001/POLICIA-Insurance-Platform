@@ -1,3 +1,5 @@
+import process from "process";
+
 export const API_BASE = '/api/v1';
 
 export async function apiRequest<T = any>(
@@ -20,7 +22,7 @@ export async function apiRequest<T = any>(
   }
 
   try {
-    const res = await fetch(`${API_BASE}${endpoint}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, {
       ...options,
       headers,
     });
