@@ -18,7 +18,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: [config.corsOrigin, 'http://localhost:3000', 'http://127.0.0.1:3000'],
+  origin: [config.corsOrigin, 'http://localhost:3000', 'http://127.0.0.1:3000','https://policia-insurance-platform.vercel.app'],
   credentials: true,
 }));
 
